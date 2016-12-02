@@ -1,0 +1,51 @@
+
+C:\Users\admin\Documents\Studies\7th Sem\Natural Language Processing\SeeEvaluati
+on\SEE\SEE\QueryGenerator>python main.py
+System: Hello! How are you? How may I help you?
+Customer: Hey! What phone do you have that are less than Rs 20000 ?
+System: We have a variety pf choices that will cater to your requirements.
+
+        XOLO Opus 3
+
+        XOLO Q1020
+
+        XOLO Q710s
+
+        XOLO Q2100
+Customer: Thanks! Do you have any Samsung Galaxy phones with good Camera specifi
+cations?
+System: We have some suggestions for you.
+Samsung Galaxy Tab 3 Plus 10.1 P8220
+        Features: Camera : Video
+        Value: 1080p@30fps
+Samsung Galaxy Tab 3 Plus 10.1 P8220
+        Features: Camera : Primary
+        Value: Yes
+Samsung i8910 Omnia HD
+        Features: Tests : Camera
+        Value: Photo
+Samsung Galaxy Tab 3 Plus 10.1 P8220
+        Features: Camera : Features
+        Value: Geo-tagging
+Customer: Great, What about any phones between Rs 15000 and Rs 30000 ?
+System: We have some suggestions for you.
+
+        XOLO Q1020
+
+        XOLO Q710s
+
+        XOLO One
+
+        XOLO Q700s plus
+Customer: Good! Show me the Memory specs of Apple iPhone ?
+System: You're in luck! We have the following options!
+Would you like to see Apple iPhone
+        Features: Memory : Internal
+        Value: 4/8/16 GB or Apple iPhone
+        Features: Memory : Card slot
+        Value: No
+Customer: Great! Thanks for the answers! Bye
+Salesman: Thank you! It was nice talking to you!
+
+C:\Users\admin\Documents\Studies\7th Sem\Natural Language Processing\SeeEvaluati
+on\SEE\SEE\QueryGenerator>
