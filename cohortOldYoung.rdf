@@ -1,0 +1,77 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix hao: <http://idea.tw.rpi.edu/projects/heals/hao/> .
+@prefix sco: <http://idea.tw.rpi.edu/projects/heals/sco/> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix stato: <http://purl.obolibrary.org/obo/STATO_> .
+@prefix obcs: <http://purl.obolibrary.org/obo/OBCS_> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix chear: <http://hadatac.org/ont/chear#> .
+@prefix : <http://idea.tw.rpi.edu/projects/heals/hao/kb/> .
+:cohort-examplesubpopulation-cartridge-affaf5136dc551e1159fb5eb536ec3ac 
+    sio:hasPart :use_cohort-affaf5136dc551e1159fb5eb536ec3ac,
+                [a :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h],
+                :cancer_status-affaf5136dc551e1159fb5eb536ec3ac .
+    :use_cohort-affaf5136dc551e1159fb5eb536ec3ac
+        rdf:type    hao:UseCohort ;
+        rdfs:label "Use Cohort"^^xsd:string ;
+        sio:hasValue    "yes"^^xsd:string .
+
+    :young_adult-affaf5136dc551e1159fb5eb536ec3ac
+        rdf:type sco:YoungAdult;
+        rdfs:label "Young Adult";
+        sio:isAttributeOf :youngCohort-affaf5136dc551e1159fb5eb536ec3ace6 .
+
+    :youngCohort-affaf5136dc551e1159fb5eb536ec3ace6 a owl:Class;
+       rdfs:label "Young Adult Cohort";
+       rdfs:subClassOf :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h .
+
+    :old_adult-affaf5136dc551e1159fb5eb536ec3ac
+        rdf:type sco:OldAdult;
+        rdfs:label "Old Adult";
+        sio:isAttributeOf :oldCohort-affaf5136dc551e1159fb5eb536ec3ace6 .
+
+    :oldCohort-affaf5136dc551e1159fb5eb536ec3ace6 a owl:Class;
+       rdfs:label "Old Adult Cohort";
+       rdfs:subClassOf :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h .
+
+    :overweight-affaf5136dc551e1159fb5eb536ec3ac
+        rdf:type sco:Overweight;
+        rdfs:label "Overweight";
+        sio:isAttributeOf :overweightCohort-affaf5136dc551e1159fb5eb536ec3ace6 .
+
+    :overweightCohort-affaf5136dc551e1159fb5eb536ec3ace6 a owl:Class;
+       rdfs:label "Overweight Cohort";
+       rdfs:subClassOf :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h .
+
+    :severlyObese-affaf5136dc551e1159fb5eb536ec3ac
+        rdf:type sco:SeverlyObese;
+        rdfs:label "Severly Obese";
+        sio:isAttributeOf :severlyObeseCohort-affaf5136dc551e1159fb5eb536ec3ace6 .
+
+    :severlyObeseCohort-affaf5136dc551e1159fb5eb536ec3ace6 a owl:Class;
+       rdfs:label "Severly Obese Cohort";
+       rdfs:subClassOf :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h .
+
+    :moderatelyObese-affaf5136dc551e1159fb5eb536ec3ac
+        rdf:type sco:ModeratelyObese;
+        rdfs:label "Moderately Obese";
+        sio:isAttributeOf :moderatelyObeseCohort-affaf5136dc551e1159fb5eb536ec3ace6 .
+
+    :moderatelyObeseCohort-affaf5136dc551e1159fb5eb536ec3ace6 a owl:Class;
+       rdfs:label "Moderately Obese Cohort";
+       rdfs:subClassOf :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h .
+    
+    :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h a owl:Class;
+       rdfs:subClassOf sco:Patient;
+       rdfs:label "Study Cohort" .
+            
+    :cancer_status-affaf5136dc551e1159fb5eb536ec3ac
+        rdf:type    hao:CancerStatus ;
+        rdfs:label "Cancer Status - No"^^xsd:string ;
+        sio:hasValue "no"^^xsd:string .
