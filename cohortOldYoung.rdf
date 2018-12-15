@@ -75,3 +75,20 @@
         rdf:type    hao:CancerStatus ;
         rdfs:label "Cancer Status - No"^^xsd:string ;
         sio:hasValue "no"^^xsd:string .
+
+    sco:OldAdult a owl:Class ;
+      rdfs:label "Old Adult" ;
+      rdfs:subClassOf [ a owl:Restriction ;
+              owl:onProperty sio:isAttributeOf ;
+              owl:someValuesFrom [ a owl:Restriction ;
+                      owl:onProperty sio:hasAttribute;
+                      owl:someValuesFrom [ a owl:Class ;
+                              owl:intersectionOf ( sio:Age [ a owl:Restriction ;
+                                          owl:onProperty stato:0000129 ;
+                                          owl:someValuesFrom [ a rdfs:Datatype ;
+                                                  owl:intersectionOf ( [ a rdfs:Datatype ;
+                                                              owl:onDatatype xsd:float ;
+                                                              owl:withRestrictions ( [ xsd:minExclusive "40"^^xsd:float ] ) ] [ a rdfs:Datatype ;
+                                                              owl:onDatatype xsd:float ;
+                                                              owl:withRestrictions ( [ xsd:maxExclusive "65"^^xsd:float ] ) ] ) ] ] ) ] ] ],
+                    sco:AgeQuality .
