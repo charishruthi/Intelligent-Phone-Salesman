@@ -22,15 +22,6 @@
         rdfs:label "Use Cohort"^^xsd:string ;
         sio:hasValue    "yes"^^xsd:string .
 
-    :young_adult-affaf5136dc551e1159fb5eb536ec3ac
-        rdf:type sco:YoungAdult;
-        rdfs:label "Young Adult";
-        sio:isAttributeOf :youngCohort-affaf5136dc551e1159fb5eb536ec3ace6 .
-
-    :youngCohort-affaf5136dc551e1159fb5eb536ec3ace6 a owl:Class;
-       rdfs:label "Young Adult Cohort";
-       rdfs:subClassOf :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h .
-
     :old_adult-affaf5136dc551e1159fb5eb536ec3ac
         rdf:type sco:OldAdult;
         rdfs:label "Old Adult";
@@ -47,25 +38,7 @@
 
     :overweightCohort-affaf5136dc551e1159fb5eb536ec3ace6 a owl:Class;
        rdfs:label "Overweight Cohort";
-       rdfs:subClassOf :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h .
-
-    :severlyObese-affaf5136dc551e1159fb5eb536ec3ac
-        rdf:type sco:SeverlyObese;
-        rdfs:label "Severly Obese";
-        sio:isAttributeOf :severlyObeseCohort-affaf5136dc551e1159fb5eb536ec3ace6 .
-
-    :severlyObeseCohort-affaf5136dc551e1159fb5eb536ec3ace6 a owl:Class;
-       rdfs:label "Severly Obese Cohort";
-       rdfs:subClassOf :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h .
-
-    :moderatelyObese-affaf5136dc551e1159fb5eb536ec3ac
-        rdf:type sco:ModeratelyObese;
-        rdfs:label "Moderately Obese";
-        sio:isAttributeOf :moderatelyObeseCohort-affaf5136dc551e1159fb5eb536ec3ace6 .
-
-    :moderatelyObeseCohort-affaf5136dc551e1159fb5eb536ec3ace6 a owl:Class;
-       rdfs:label "Moderately Obese Cohort";
-       rdfs:subClassOf :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h .
+       rdfs:subClassOf :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h .   
     
     :studyCohort-affaf5136dc551e1159fb5eb536ec3ace6h a owl:Class;
        rdfs:subClassOf sco:Patient;
@@ -92,3 +65,20 @@
                                                               owl:onDatatype xsd:float ;
                                                               owl:withRestrictions ( [ xsd:maxExclusive "65"^^xsd:float ] ) ] ) ] ] ) ] ] ],
                     sco:AgeQuality .
+    
+     sco:Overweight a owl:Class ;
+      rdfs:label "Overweight" ;
+      rdfs:subClassOf [ a owl:Restriction ;
+              owl:onProperty sio:isAttributeOf ;
+              owl:someValuesFrom [ a owl:Restriction ;
+                      owl:onProperty sio:hasAttribute;
+                      owl:someValuesFrom [ a owl:Class ;
+                              owl:intersectionOf ( sco:BodyMassIndex [ a owl:Restriction ;
+                                          owl:onProperty stato:0000129 ;
+                                          owl:someValuesFrom [ a rdfs:Datatype ;
+                                                  owl:intersectionOf ( [ a rdfs:Datatype ;
+                                                              owl:onDatatype xsd:float ;
+                                                              owl:withRestrictions ( [ xsd:minExclusive "25"^^xsd:float ] ) ] [ a rdfs:Datatype ;
+                                                              owl:onDatatype xsd:float ;
+                                                              owl:withRestrictions ( [ xsd:maxExclusive "30"^^xsd:float ] ) ] ) ] ] ) ] ] ],
+                    sco:BodyMassIndex .
