@@ -81,4 +81,4 @@
                                                               owl:withRestrictions ( [ xsd:minExclusive "25"^^xsd:float ] ) ] [ a rdfs:Datatype ;
                                                               owl:onDatatype xsd:float ;
                                                               owl:withRestrictions ( [ xsd:maxExclusive "30"^^xsd:float ] ) ] ) ] ] ) ] ] ],
-                    sco:BodyMassIndex .
+                    sco:BodyMassIndexQuality .
